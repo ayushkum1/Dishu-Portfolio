@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { makeStyles, createStyles } from "@material-ui/core";
 import Grid from "@material-ui/core/Grid";
 import SideNav from "../general-component/SideNav";
@@ -106,6 +106,11 @@ export default function Contact(props) {
   //   borderColor = "yellow";
   // };
   // const inputStyle = customStyle();
+
+  useEffect(() => {
+    document.title = "Vikrant Singh";
+  }, []);
+
   return (
     <Grid container className={styles.main}>
       <Grid item xs={12} md={12} lg={12} xl={12}>

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { makeStyles } from "@material-ui/core";
 import Grid from "@material-ui/core/Grid";
 import SideNav from "../general-component/SideNav";
@@ -88,6 +88,10 @@ export default function Portfolio(props) {
       ],
     },
   ];
+
+  useEffect(() => {
+    document.title = "Vikrant Singh";
+  }, []);
 
   return (
     <Grid container className={styles.main}>

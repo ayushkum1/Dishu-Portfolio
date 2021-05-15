@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Grid from "@material-ui/core/Grid";
 import { makeStyles } from "@material-ui/core";
 import Paper from "@material-ui/core/Paper";
@@ -100,6 +100,11 @@ const useStyle = makeStyles((theme) => ({
 
 function Home(props) {
   const styles = useStyle();
+
+  useEffect(() => {
+    document.title = "Vikrant Singh";
+  }, []);
+
   console.log(props);
   return (
     <Grid container className={styles.main}>
